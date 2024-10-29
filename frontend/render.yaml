@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: your-service-name
+    buildCommand: npm run build
+    startCommand: npm run start
+    env:
+      NODE_ENV: production
+    staticPublishPath: ./dist
+    routes:
+      - src: /*
+        dest: /index.html

@@ -3,11 +3,32 @@
     "version": "1.0.0",
     "description": "Full stack application with React frontend and Node.js backend",
     "scripts": {
-      "install-all": "npm install && cd frontend && npm install && cd ../backend && npm install",
-      "build": "cd frontend && npm run build",
-      "start": "cd backend && npm start"
+        "install-all": "npm install && cd frontend && npm install && cd ../backend && npm install",
+        "build": "cd frontend && npm run build",
+        "start": "cd backend && npm start"
     },
     "engines": {
-      "node": "18.x"
+        "node": "18.x"
+    },
+    "dependencies": {
+        "@mui/icons-material": "^6.1.6",
+        "@mui/material": "^6.1.6",
+        "axios": "^1.7.7",
+        "react": "^18.3.1",
+        "react-bootstrap": "^2.10.5",
+        "react-dom": "^18.3.1",
+        "react-google-recaptcha": "^3.1.0",
+        "react-router-dom": "^6.27.0",
+        "zod": "^3.23.8"
+    },
+    "devDependencies": {
+        "@hookform/resolvers": "^3.9.1",
+        "@types/node": "^22.8.4",
+        "@types/react": "^18.3.12",
+        "@types/react-bootstrap": "^0.32.37",
+        "@types/react-dom": "^18.3.1",
+        "@types/react-google-recaptcha": "^2.1.9",
+        "@types/react-router-dom": "^5.3.3",
+        "typescript": "^5.6.3"
     }
-  }
+}

@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "start": "serve ./dist",
-    "postbuild": "cp public/_redirects dist/"
+    "postbuild": "copy public\\_redirects dist\\"
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",

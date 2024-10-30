@@ -14,5 +14,13 @@ export default defineConfig({
     chunkSizeWarningLimit: 1000,
   },
   publicDir: 'public',
-  envDir: path.resolve(__dirname, '..')
-})
+  envDir: path.resolve(__dirname, '..'),
+  optimizeDeps: {
+    include: [
+      '@emotion/react',
+      '@emotion/styled',
+      '@mui/material',
+      '@mui/styled-engine',
+    ],
+  },
+});

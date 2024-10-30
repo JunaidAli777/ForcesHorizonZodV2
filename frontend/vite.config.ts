@@ -6,11 +6,7 @@ export default defineConfig({
   base: '/',
   plugins: [react()],
   build: {
-    rollupOptions: {
-      input: {
-        main: 'index.html',
-      },
-    },
+    outDir: 'dist',
     chunkSizeWarningLimit: 1000,
   },
   publicDir: 'public',

@@ -9,7 +9,6 @@ import dotenv from 'dotenv';
 import User from './models/User';
 
 const envPath = path.join(__dirname, '..', '.env');
-
 dotenv.config({ path: envPath });
 
 const app = express();

@@ -8,7 +8,6 @@ interface ImageUploadProps {
 
 const ImageUpload: React.FC<ImageUploadProps> = ({ onImageUpload }) => {
   const [imageSrc, setImageSrc] = useState<string | null>(null);
-  const [isDragActive, setIsDragActive] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleContainerClick = () => {
@@ -22,18 +21,12 @@ const ImageUpload: React.FC<ImageUploadProps> = ({ onImageUpload }) => {
 
   const handleDrop = (event: React.DragEvent<HTMLDivElement>) => {
     event.preventDefault();
-    setIsDragActive(false);
     const file = event.dataTransfer.files[0];
     processFile(file);
   };
 
   const handleDragOver = (event: React.DragEvent<HTMLDivElement>) => {
     event.preventDefault();
-    setIsDragActive(true);
-  };
-
-  const handleDragLeave = () => {
-    setIsDragActive(false);
   };
 
   const processFile = (file: File | undefined) => {
@@ -72,7 +65,6 @@ const ImageUpload: React.FC<ImageUploadProps> = ({ onImageUpload }) => {
               }}
               onClick={handleContainerClick}
               onDragOver={handleDragOver}
-              onDragLeave={handleDragLeave}
               onDrop={handleDrop}
             >
               <input
